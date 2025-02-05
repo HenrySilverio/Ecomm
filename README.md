@@ -1,50 +1,50 @@
-Aqui está um README mais atrativo visualmente, organizado e bem formatado:
+Here’s your improved README in English with better structure and visual appeal:
 
 🛒 Ecomm - MethodPaymentCreditCard Component
 
-O MethodPaymentCreditCard é um componente React que fornece uma interface para inserção de dados de cartão de crédito. Ele inclui campos para:
-	•	Número do cartão
-	•	Nome do titular
-	•	Data de validade
+The MethodPaymentCreditCard component is a React functional component that provides a user interface for entering credit card details. It includes input fields for:
+	•	Card Number
+	•	Cardholder Name
+	•	Expiration Date
 	•	CVV
 
-Além disso, exibe uma representação visual do cartão, que gira para mostrar o CVV quando o campo correspondente é focado.
+It also displays a visual representation of the credit card, which flips to show the CVV when the CVV input is focused.
 
-🚀 Propriedades (Props)
+🚀 Props
 
-Prop	Tipo	Descrição
-onInputChange	(field: string, value: string) => void	Função chamada ao alterar os campos do formulário.
-tagging	object	Objeto para tagueamento de analytics.
+Prop	Type	Description
+onInputChange	(field: string, value: string) => void	Function triggered when any input field changes.
+tagging	object	Object used for analytics tagging.
 
-🎯 Estado (State)
+🎯 State
 
-Estado	Tipo	Descrição
-errorFeedback	string	Mensagem de erro para o número do cartão.
-errorFeedbackDate	string	Mensagem de erro para a data de validade.
-personalDataProps	object	Dados pessoais do usuário.
-allowedBrands	string[]	Lista de bandeiras permitidas.
-cardDetails	object	Informações do cartão (bandeira, número, titular, CVV, validade).
-isButtonDisabled	boolean	Indica se o botão de envio está desabilitado.
-brandImages	object	Mapeia bandeiras de cartões para suas imagens.
-isFlipped	boolean	Indica se o cartão está girado para exibir o CVV.
+State	Type	Description
+errorFeedback	string	Error message related to the card number.
+errorFeedbackDate	string	Error message related to the expiration date.
+personalDataProps	object	Holds personal data properties.
+allowedBrands	string[]	Array of allowed credit card brands.
+cardDetails	object	Stores credit card details (brand, number, holder, CVV, expiration date).
+isButtonDisabled	boolean	Indicates whether the submit button should be disabled.
+brandImages	object	Maps credit card brands to their respective images.
+isFlipped	boolean	Indicates whether the credit card is flipped to display the CVV.
 
-🛠️ Funções Principais
+🛠️ Main Functions
 
-Função	Descrição
-formatCardNumber(value: string)	Formata o número do cartão adicionando espaços a cada 4 dígitos.
-formatExpiryDate(value: string)	Formata a data de validade no formato MM/YYYY.
-formatCVV(value: string)	Formata o CVV para um máximo de 3 dígitos.
-handleCardNumberChange(value: string)	Lida com mudanças no campo do número do cartão, formatando e validando.
-validateExpiryDate(value: string)	Valida o formato da data de validade.
-handleInputChange(e: React.ChangeEvent<HTMLInputElement>)	Manipula mudanças em qualquer campo de entrada.
-handleBlur(e: React.FocusEvent<HTMLInputElement>)	Manipula o evento de perda de foco para validação da data de validade.
+Function	Description
+formatCardNumber(value: string)	Formats the card number by adding spaces every 4 digits.
+formatExpiryDate(value: string)	Formats the expiration date to MM/YYYY format.
+formatCVV(value: string)	Formats the CVV to a maximum of 3 digits.
+handleCardNumberChange(value: string)	Handles changes to the card number input, including formatting and validation.
+validateExpiryDate(value: string)	Validates the expiration date format.
+handleInputChange(e: React.ChangeEvent<HTMLInputElement>)	Handles changes to any input field.
+handleBlur(e: React.FocusEvent<HTMLInputElement>)	Handles the blur event for input fields, including expiration date validation.
 
-💡 Como Usar
+💡 Usage
 
 import MethodPaymentCreditCard from './method-payment-credit-card.component';
 
 const handleInputChange = (field: string, value: string) => {
-  // Lógica para manipular mudança de input
+  // Handle input change
 };
 
 const tagging = {
@@ -53,32 +53,32 @@ const tagging = {
 
 <MethodPaymentCreditCard onInputChange={handleInputChange} tagging={tagging} />;
 
-🎨 Estilos
+🎨 Styling
 
-Este componente utiliza styled-components para estilização. As definições de estilo podem ser encontradas em:
+This component uses styled-components for styling. The styles are located in:
 
 📂 method-payment-credit-card.style.ts
 
-📦 Dependências
+📦 Dependencies
 
-O componente depende das seguintes bibliotecas:
-	•	🏗 mondrian-react - Para o componente de entrada (Input).
-	•	💳 credit-card-type - Para detectar o tipo do cartão de crédito.
-	•	🔗 jotai - Para gerenciamento de estado.
-	•	🖼 next/image - Para manipulação de imagens estáticas.
-	•	🎨 styled-components - Para estilização do componente.
+The component relies on the following libraries:
+	•	🏗 mondrian-react - For the Input component.
+	•	💳 credit-card-type - For detecting credit card types.
+	•	🔗 jotai - For state management.
+	•	🖼 next/image - For handling static images.
+	•	🎨 styled-components - For styling the component.
 
-📁 Estrutura de Arquivos
+📁 File Structure
 
 📂 src/components/method-payment-credit-card
- ├── 📄 method-payment-credit-card.component.tsx  # Componente principal
- ├── 🎨 method-payment-credit-card.style.ts       # Estilos com styled-components
+ ├── 📄 method-payment-credit-card.component.tsx  # Main component file
+ ├── 🎨 method-payment-credit-card.style.ts       # Styled-components file
 
-✨ Melhorias Futuras
-	•	Suporte a mais bandeiras de cartão.
-	•	Melhorias na acessibilidade e validação dos campos.
-	•	Adição de testes unitários.
+✨ Future Enhancements
+	•	Support for additional credit card brands.
+	•	Improved accessibility and validation.
+	•	Unit tests implementation.
 
-Gostou deste projeto? ⭐ Dê um star no repositório e contribua! 🚀
+Did you like this project? ⭐ Give it a star and contribute! 🚀
 
-Agora o README está mais organizado, legível e atrativo visualmente, com seções bem estruturadas e ícones para facilitar a leitura! Se quiser mais alguma personalização, me avise. 🚀
+Now your README is more structured, visually appealing, and easy to read! Let me know if you need any further refinements. 🚀
